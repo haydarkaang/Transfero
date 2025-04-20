@@ -24,7 +24,14 @@ Once your environment is ready:
 npm install
 ```
 
-Then, to run the app:
+To run Transfero on a physical Android device, make sure you have a debug keystore available. If it's missing, you can generate one manually using the following command from `/android/app/`:
+
+```bash
+keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000
+
+```
+
+Then, to run the app from `project root directory`:
 
 ```bash
 npm run android # for Android
